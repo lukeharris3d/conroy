@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>AP01</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Make the app take up the full screen */
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden; /* Prevents scrollbars if the model is slightly larger */
+      }
+
+      model-viewer {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="script.js"></script>
+    <!-- Loads <model-viewer> for browsers: -->
+    <script
+      type="module"
+      src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"
+    ></script>
+
+    <model-viewer
+      src="https://lukeharris3d.github.io/conroy/AP01.glb"
+      ar
+      ar-modes="webxr scene-viewer quick-look"
+      camera-controls
+      tone-mapping="neutral"
+      poster="poster.webp"
+      shadow-intensity="1"
+      camera-orbit="126.7deg 62.29deg 1.737m"
+      field-of-view="30deg"
+    >
+      <button
+        class="Hotspot"
+        slot="hotspot-2"
+        data-position="-0.24080840677607018m 0.04275401269180534m 0.2302876598844671m"
+        data-normal="-0.3652376519812793m -0.6214701775915372m 0.6930918235988254m"
+        data-visibility-attribute="visible"
+      >
+        <div class="HotspotAnnotation">1</div></button
+      ><button
+        class="Hotspot"
+        slot="hotspot-3"
+        data-position="-0.20931224203251383m 0.09337086301726734m 0.22213182388526037m"
+        data-normal="-0.5691157341040599m -0.5048675444448364m 0.6490115898513971m"
+        data-visibility-attribute="visible"
+      >
+        <div class="HotspotAnnotation">2</div></button
+      ><button
+        class="Hotspot"
+        slot="hotspot-4"
+        data-position="-0.10912776538203708m 0.2775553635292668m 0.12711421901561254m"
+        data-normal="-0.5636374869119172m 0.36888921194990526m 0.7390761345454178m"
+        data-visibility-attribute="visible"
+      >
+        <div class="HotspotAnnotation">3</div></button
+      ><button
+        class="Hotspot"
+        slot="hotspot-5"
+        data-position="-0.1673274065555351m 0.23279177963782532m 0.17089505360826063m"
+        data-normal="-0.27080891646277483m 0.9425259629524715m 0.19572260964123228m"
+        data-visibility-attribute="visible"
+      >
+        <div class="HotspotAnnotation">4</div></button
+      ><button
+        class="Hotspot"
+        slot="hotspot-6"
+        data-position="-0.09899329858225026m 0.30652905534010993m 0.12077416524844689m"
+        data-normal="-0.3840385973947571m 0.6860567294075482m 0.6179324556500376m"
+        data-visibility-attribute="visible"
+      >
+        <div class="HotspotAnnotation">5</div></button
+      ><button
+        class="Hotspot"
+        slot="hotspot-7"
+        data-position="-0.12586418728770457m 0.24031377192711592m 0.13577494236241527m"
+        data-normal="-0.5078677699532318m 0.7026389537204911m 0.4983661595225994m"
+        data-visibility-attribute="visible"
+      >
+        <div class="HotspotAnnotation">6</div></button
+      ><button
+        class="Hotspot"
+        slot="hotspot-8"
+        data-position="-0.14513524832957794m 0.20533408856191804m 0.1560550406286415m"
+        data-normal="-0.5022109010155779m 0.7861719787988429m 0.3601636165031572m"
+        data-visibility-attribute="visible"
+      >
+        <div class="HotspotAnnotation">7</div></button
+      ><button
+        class="Hotspot"
+        slot="hotspot-9"
+        data-position="-0.16377338438796338m 0.16549144843069885m 0.15980743161623595m"
+        data-normal="-0.5936741806617943m 0.7578360134322832m 0.2706206643266762m"
+        data-visibility-attribute="visible"
+      >
+        <div class="HotspotAnnotation">8</div></button
+      ><button
+        class="Hotspot"
+        slot="hotspot-10"
+        data-position="-0.1751598976046645m 0.13031019087859608m 0.17583615855871587m"
+        data-normal="-0.6729396269876612m 0.5873276998635046m 0.44966479893666655m"
+        data-visibility-attribute="visible"
+      >
+        <div class="HotspotAnnotation">9</div></button
+      ><button
+        class="Hotspot"
+        slot="hotspot-11"
+        data-position="-0.18264024571730864m 0.09322128541542118m 0.18649949139465766m"
+        data-normal="-0.5664527040967696m 0.7639338175993065m 0.30908972216754044m"
+        data-visibility-attribute="visible"
+      >
+        <div class="HotspotAnnotation">10</div></button
+      ><button
+        class="Hotspot"
+        slot="hotspot-12"
+        data-position="-0.18697146681916849m 0.008656996711219028m 0.18548301334462608m"
+        data-normal="-0.9577782806617161m 0.2647502649361102m 0.11210736955680754m"
+        data-visibility-attribute="visible"
+      >
+        <div class="HotspotAnnotation">11</div>
+      </button>
+      <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+      </div>
+      <button slot="ar-button" id="ar-button">View in your space</button>
+      <div id="ar-prompt">
+        <img src="https://modelviewer.dev/shared-assets/icons/hand.png" />
+      </div>
+    </model-viewer>
+  </body>
+</html>
