@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>AP01</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Make the app take up the full screen */
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden; /* Prevents scrollbars if the model is slightly larger */
+      }
+
+      model-viewer {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="script.js"></script>
+    <!-- Loads <model-viewer> for browsers: -->
+    <script
+      type="module"
+      src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"
+    ></script>
+
+    <model-viewer
+      src="https://lukeharris3d.github.io/conroy/AP03.glb"
+      ar
+      ar-modes="webxr scene-viewer quick-look"
+      camera-controls
+      tone-mapping="neutral"
+      poster="poster.webp"
+      shadow-intensity="1"
+      camera-orbit="32.02deg 76.41deg 1.85m"
+      field-of-view="31.51deg"
+    >
+      <button
+        class="Hotspot"
+        slot="hotspot-2"
+        data-position="0.2327182413580635m 0.30707299675066363m -0.17001240893213093m"
+        data-normal="-0.4158517123787475m 0.8168229192934952m -0.39983455557082087m"
+        data-visibility-attribute="visible"
+      >
+        <div class="HotspotAnnotation">1</div></button
+      ><button
+        class="Hotspot"
+        slot="hotspot-3"
+        data-position="-0.29680495163214055m 0.12718421670054286m -0.06987760215383104m"
+        data-normal="-0.856605224406646m 0.2649905351668534m -0.4427273492695299m"
+        data-visibility-attribute="visible"
+      >
+        <div class="HotspotAnnotation">2</div></button
+      ><button
+        class="Hotspot"
+        slot="hotspot-4"
+        data-position="0.20288194943068155m 0.03752796246837353m -0.31510679071624276m"
+        data-normal="0.8364257961069151m -0.5405492885137287m -0.0905447640353363m"
+        data-visibility-attribute="visible"
+      >
+        <div class="HotspotAnnotation">3</div></button
+      ><button
+        class="Hotspot"
+        slot="hotspot-5"
+        data-position="-0.26005028403873615m 0.14349729668033506m 0.08245835925706743m"
+        data-normal="-0.28616424150840725m 0.9551778468849313m 0.07579780803021062m"
+        data-visibility-attribute="visible"
+      >
+        <div class="HotspotAnnotation">4</div>
+      </button>
+      <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+      </div>
+      <button slot="ar-button" id="ar-button">View in your space</button>
+      <div id="ar-prompt">
+        <img src="https://modelviewer.dev/shared-assets/icons/hand.png" />
+      </div>
+    </model-viewer>
+  </body>
+</html>
